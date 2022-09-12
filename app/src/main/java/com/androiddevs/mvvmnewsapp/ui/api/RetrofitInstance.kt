@@ -9,7 +9,6 @@ import util.Constans.Companion.BASE_URL
 class RetrofitInstance {
     companion object {
 
-        //by lazy sadece retrofit değişkeni çağrıldığında kullanıldı
         private val retrofit by lazy {
 
             //Çağrıları yakalamak için interceptor kullanıldı
@@ -26,6 +25,8 @@ class RetrofitInstance {
                 .build()
         }
 
+
+        //by lazy sadece api değişkeni çağrıldığında kullanıldı
         val api by lazy {
             retrofit.create(NewsAPI::class.java)
         }
